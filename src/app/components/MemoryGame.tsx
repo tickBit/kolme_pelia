@@ -219,7 +219,7 @@ export default function MemoryGame({ onBack }: MemoryGameProps) {
       </div>
 
       {/* Game Board - Increased gaps */}
-      <div className="grid grid-cols-3 md:grid-cols-4 gap-8 max-w-4xl">
+      <div className="grid grid-cols-3 md:grid-cols-4 gap-18 max-w-8xl">
         {cards.map((card, index) => (
           <motion.div
             key={card.id}
@@ -227,7 +227,7 @@ export default function MemoryGame({ onBack }: MemoryGameProps) {
             animate={{ scale: 1, rotate: 0 }}
             transition={{ delay: index * 0.05 }}
             whileHover={{ scale: card.isMatched ? 1 : 1.05 }}
-            whileTap={{ scale: card.isMatched ? 1 : 0.95 }}
+            whileTap={{ scale: card.isMatched ? 1 : 0.75 }}
             onClick={() => handleCardClick(index)}
             className="aspect-square cursor-pointer"
           >
@@ -243,7 +243,16 @@ export default function MemoryGame({ onBack }: MemoryGameProps) {
                   className="absolute w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl shadow-xl flex items-center justify-center"
                   style={{ backfaceVisibility: 'hidden' }}
                 >
-                  <div className="text-6xl">❓</div>
+                  {card.isMatched || card.isFlipped ?
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ duration: 0.5 }}
+                      className="text-6xl text-green-100"
+                    ></motion.div>
+                    :
+                    <div className="text-5xl">❓</div>
+                  }
                 </div>
                 
                 {/* Front of card */}
