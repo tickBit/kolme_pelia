@@ -43,7 +43,7 @@ const shapes: Shape[] = [
     id: 'purple-square', 
     name: 'Neliö', 
     color: 'bg-purple-500', 
-    colorName: 'Purrpura',
+    colorName: 'Purppura',
     icon: <Square className="w-full h-full fill-current" />
   },
   { 
