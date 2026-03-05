@@ -156,7 +156,7 @@ export default function MemoryGame({ onBack }: MemoryGameProps) {
             <div className="flex items-center gap-3">
               <Star className="w-8 h-8 text-white fill-white" />
               <div>
-                <p className="text-sm font-bold text-white/80">Score</p>
+                <p className="text-sm font-bold text-white/80">Pisteet</p>
                 <p className="text-3xl font-black text-white">{score}</p>
               </div>
             </div>
@@ -167,7 +167,7 @@ export default function MemoryGame({ onBack }: MemoryGameProps) {
             <div className="flex items-center gap-2">
               <Zap className="w-6 h-6 text-white" />
               <div>
-                <p className="text-sm font-bold text-white/80">Moves</p>
+                <p className="text-sm font-bold text-white/80">Siirrot</p>
                 <p className="text-3xl font-black text-white">{moves}</p>
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function MemoryGame({ onBack }: MemoryGameProps) {
               <div className="flex items-center gap-2">
                 <span className="text-2xl">🔥</span>
                 <div>
-                  <p className="text-sm font-bold text-white/80">Streak</p>
+                  <p className="text-sm font-bold text-white/80">Putki</p>
                   <p className="text-3xl font-black text-white">{perfectMatches}</p>
                 </div>
               </div>
@@ -200,7 +200,7 @@ export default function MemoryGame({ onBack }: MemoryGameProps) {
               <div className="flex items-center gap-2">
                 <Trophy className="w-6 h-6 text-white" />
                 <div>
-                  <p className="text-sm font-bold text-white/80">Best</p>
+                  <p className="text-sm font-bold text-white/80">Paras</p>
                   <p className="text-2xl font-black text-white">{bestScore}</p>
                 </div>
               </div>
@@ -291,19 +291,19 @@ export default function MemoryGame({ onBack }: MemoryGameProps) {
             >
               <div className="text-9xl mb-6">🎉</div>
               <h2 className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-4">
-                You Won!
+                Voitit!
               </h2>
-              <p className="text-3xl text-gray-700 mb-4">Great job! You found all pairs!</p>
+              <p className="text-3xl text-gray-700 mb-4">Hienoa! Löysit kaikki parit!</p>
               
               {/* Final Stats */}
               <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-6 mb-8">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <p className="text-lg text-gray-600">Final Score</p>
+                    <p className="text-lg text-gray-600">Lopulliset Pisteet</p>
                     <p className="text-4xl font-black text-purple-600">{score}</p>
                   </div>
                   <div>
-                    <p className="text-lg text-gray-600">Moves Used</p>
+                    <p className="text-lg text-gray-600">Siirtoja käytetty</p>
                     <p className="text-4xl font-black text-blue-600">{moves}</p>
                   </div>
                 </div>
@@ -315,7 +315,7 @@ export default function MemoryGame({ onBack }: MemoryGameProps) {
                 onClick={initializeGame}
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-12 py-4 rounded-2xl text-2xl font-black shadow-lg"
               >
-                Play Again! 🎮
+                Pelaa uudelleen! 🎮
               </motion.button>
             </motion.div>
           </motion.div>

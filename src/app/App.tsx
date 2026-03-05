@@ -28,15 +28,15 @@ export default function App() {
               className="text-center mb-12"
             >
               <h1 className="text-6xl font-black text-white mb-4 drop-shadow-lg">
-                Fun Learning! 🎉
+                Hauskaa oppimista! 🎉
               </h1>
-              <p className="text-2xl text-white drop-shadow-md">Choose a game to play!</p>
+              <p className="text-2xl text-white drop-shadow-md">Valitse peli!</p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl w-full">
               <GameButton
                 icon={<Brain className="w-24 h-24" />}
-                title="Memory Match"
+                title="Muistipeli"
                 color="bg-gradient-to-br from-blue-400 to-blue-600"
                 emoji="🧠"
                 delay={0.1}
@@ -45,7 +45,7 @@ export default function App() {
               
               <GameButton
                 icon={<Eye className="w-24 h-24" />}
-                title="Find Animals"
+                title="Löydä eläimet"
                 color="bg-gradient-to-br from-green-400 to-green-600"
                 emoji="🐶"
                 delay={0.2}
@@ -54,7 +54,7 @@ export default function App() {
               
               <GameButton
                 icon={<Shapes className="w-24 h-24" />}
-                title="Shapes & Colors"
+                title="Muodot & Värit"
                 color="bg-gradient-to-br from-orange-400 to-orange-600"
                 emoji="🔶"
                 delay={0.3}

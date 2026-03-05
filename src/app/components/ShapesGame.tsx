@@ -13,44 +13,44 @@ interface Shape {
 const shapes: Shape[] = [
   { 
     id: 'red-circle', 
-    name: 'Circle', 
+    name: 'Ympyrä', 
     color: 'bg-red-500', 
-    colorName: 'Red',
+    colorName: 'Puaninen',
     icon: <Circle className="w-full h-full fill-current" />
   },
   { 
     id: 'blue-square', 
-    name: 'Square', 
+    name: 'Neliö', 
     color: 'bg-blue-500', 
-    colorName: 'Blue',
+    colorName: 'Sininen',
     icon: <Square className="w-full h-full fill-current" />
   },
   { 
     id: 'yellow-triangle', 
-    name: 'Triangle', 
+    name: 'Kolmio', 
     color: 'bg-yellow-500', 
-    colorName: 'Yellow',
+    colorName: 'Keltainen',
     icon: <Triangle className="w-full h-full fill-current" />
   },
   { 
     id: 'green-circle', 
-    name: 'Circle', 
+    name: 'Ympyrä', 
     color: 'bg-green-500', 
-    colorName: 'Green',
+    colorName: 'Vihreä',
     icon: <Circle className="w-full h-full fill-current" />
   },
   { 
     id: 'purple-square', 
-    name: 'Square', 
+    name: 'Neliö', 
     color: 'bg-purple-500', 
-    colorName: 'Purple',
+    colorName: 'Purrpura',
     icon: <Square className="w-full h-full fill-current" />
   },
   { 
     id: 'orange-triangle', 
-    name: 'Triangle', 
+    name: 'Kolmio', 
     color: 'bg-orange-500', 
-    colorName: 'Orange',
+    colorName: 'Oranssi',
     icon: <Triangle className="w-full h-full fill-current" />
   },
 ];
@@ -124,9 +124,9 @@ export default function ShapesGame({ onBack }: ShapesGameProps) {
 
   const getQuestionText = () => {
     if (questionType === 'shape') {
-      return `Find another ${targetShape.name}!`;
+      return `Etsi toinen ${targetShape.name}!`;
     } else {
-      return `Find another ${targetShape.colorName} shape!`;
+      return `Etsi toinen ${targetShape.colorName} muoto!`;
     }
   };
 
@@ -144,7 +144,7 @@ export default function ShapesGame({ onBack }: ShapesGameProps) {
         </motion.button>
         
         <div className="bg-white/90 px-6 py-3 rounded-2xl shadow-lg">
-          <p className="text-2xl font-black text-orange-600">Score: {score}</p>
+          <p className="text-2xl font-black text-orange-600">Pisteet: {score}</p>
         </div>
         
         <motion.button

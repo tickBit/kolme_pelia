@@ -9,14 +9,14 @@ interface Animal {
 }
 
 const animals: Animal[] = [
-  { emoji: '🐶', name: 'Dog', sound: 'Woof!' },
-  { emoji: '🐱', name: 'Cat', sound: 'Meow!' },
-  { emoji: '🐮', name: 'Cow', sound: 'Moo!' },
-  { emoji: '🐷', name: 'Pig', sound: 'Oink!' },
-  { emoji: '🐸', name: 'Frog', sound: 'Ribbit!' },
-  { emoji: '🐔', name: 'Chicken', sound: 'Cluck!' },
-  { emoji: '🦁', name: 'Lion', sound: 'Roar!' },
-  { emoji: '🐘', name: 'Elephant', sound: 'Trumpet!' },
+  { emoji: '🐶', name: 'Koira', sound: 'Hau!' },
+  { emoji: '🐱', name: 'Kissa', sound: 'Miau!' },
+  { emoji: '🐮', name: 'Lehmä', sound: 'Ammuuu!' },
+  { emoji: '🐷', name: 'Sika', sound: 'Röh!' },
+  { emoji: '🐸', name: 'Sammakko', sound: 'Kurnuttaa!' },
+  { emoji: '🐔', name: 'Kana', sound: 'Kot!' },
+  { emoji: '🦁', name: 'Leijona', sound: 'Murrr!' },
+  { emoji: '🐘', name: 'Norsu', sound: 'Trumpetti!' },
 ];
 
 interface RecognitionGameProps {
@@ -114,7 +114,7 @@ export default function RecognitionGame({ onBack }: RecognitionGameProps) {
             <div className="flex items-center gap-3">
               <Star className="w-8 h-8 text-white fill-white" />
               <div>
-                <p className="text-sm font-bold text-white/80">Score</p>
+                <p className="text-sm font-bold text-white/80">Pisteet</p>
                 <p className="text-3xl font-black text-white">{score}</p>
               </div>
             </div>
@@ -130,7 +130,7 @@ export default function RecognitionGame({ onBack }: RecognitionGameProps) {
               <div className="flex items-center gap-2">
                 <span className="text-2xl">🔥</span>
                 <div>
-                  <p className="text-sm font-bold text-white/80">Streak</p>
+                  <p className="text-sm font-bold text-white/80">Putki</p>
                   <p className="text-3xl font-black text-white">{streak}</p>
                 </div>
               </div>
@@ -147,7 +147,7 @@ export default function RecognitionGame({ onBack }: RecognitionGameProps) {
               <div className="flex items-center gap-2">
                 <Trophy className="w-6 h-6 text-white" />
                 <div>
-                  <p className="text-sm font-bold text-white/80">Best</p>
+                  <p className="text-sm font-bold text-white/80">Paras</p>
                   <p className="text-2xl font-black text-white">{bestScore}</p>
                 </div>
               </div>
@@ -179,7 +179,7 @@ export default function RecognitionGame({ onBack }: RecognitionGameProps) {
             {currentAnimal.emoji}
           </motion.div>
           <h2 className="text-4xl font-black text-gray-700 mb-2">
-            Which animal is this?
+            Kumpi eläin tämä on?
           </h2>
           <p className="text-2xl text-gray-500">{currentAnimal.sound}</p>
         </div>
@@ -231,7 +231,7 @@ export default function RecognitionGame({ onBack }: RecognitionGameProps) {
               animate={{ y: 0, opacity: 1 }}
               className="bg-green-500 text-white px-8 py-4 rounded-2xl shadow-2xl"
             >
-              <p className="text-3xl font-black">+10 Points!</p>
+              <p className="text-3xl font-black">+10 Pistettä!</p>
             </motion.div>
           </motion.div>
         )}
@@ -257,7 +257,7 @@ export default function RecognitionGame({ onBack }: RecognitionGameProps) {
               animate={{ y: 0, opacity: 1 }}
               className="bg-red-500 text-white px-8 py-4 rounded-2xl shadow-2xl"
             >
-              <p className="text-3xl font-black">Try Again!</p>
+              <p className="text-3xl font-black">Yritä uudelleen!</p>
             </motion.div>
           </motion.div>
         )}
