@@ -44,7 +44,7 @@ export default function RecognitionGame({ onBack }: RecognitionGameProps) {
     const wrongAnswers = animals
       .filter(a => a.name !== correct.name)
       .sort(() => Math.random() - 0.5)
-      .slice(0, 3);
+      .slice(0, 1);
 
     // Shuffle correct answer with wrong answers
     const allOptions = [correct, ...wrongAnswers].sort(() => Math.random() - 0.5);
@@ -166,9 +166,9 @@ export default function RecognitionGame({ onBack }: RecognitionGameProps) {
       </div>
 
       {/* Main Content */}
-      <div className="flex flex-col items-center gap-12 max-w-5xl w-full">
+      <div className="flex flex-col items-center gap-12 max-w-4xl w-full">
         {/* Question */}
-        <div className="bg-white/90 rounded-3xl p-12 shadow-2xl text-center">
+        <div className="bg-white/90 rounded-2xl p-12 shadow-1xl text-center">
           <motion.div
             key={currentAnimal.name}
             initial={{ scale: 0, rotate: -180 }}
@@ -178,10 +178,10 @@ export default function RecognitionGame({ onBack }: RecognitionGameProps) {
           >
             {currentAnimal.emoji}
           </motion.div>
-          <h2 className="text-4xl font-black text-gray-800 mb-2">
+          <h2 className="text-4xl font-black text-gray-700 mb-2">
             Which animal is this?
           </h2>
-          <p className="text-2xl text-gray-600">{currentAnimal.sound}</p>
+          <p className="text-2xl text-gray-500">{currentAnimal.sound}</p>
         </div>
 
         {/* Options - With increased gaps */}
@@ -200,7 +200,7 @@ export default function RecognitionGame({ onBack }: RecognitionGameProps) {
             >
               <div className="flex flex-col items-center gap-3">
                 <div className="text-5xl mb-2">{animal.emoji}</div>
-                <p className="text-4xl font-black text-gray-800">{animal.name}</p>
+                <p className="text-4xl font-black text-gray-600">{animal.name}</p>
               </div>
             </motion.button>
           ))}
