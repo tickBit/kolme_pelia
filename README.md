@@ -8,7 +8,7 @@ Made in Figma mostly. Improved manually.
 
 **Meant to be played on browser's full screen mode -> Press F11**
 
-# Miten asentaa?
+## Miten asentaa?
 
 Node.js:n täytyy olla asennettuna. Sitten projektin juuressa komennolla `npm install` sovellus asentuu.
 Sen jälkeen se käynnistetään komennolla `npm run dev`.
