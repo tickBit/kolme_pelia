@@ -170,7 +170,7 @@ export default function ShapesGame({ onBack }: ShapesGameProps) {
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ type: 'spring', duration: 0.6 }}
-            className={`w-48 h-48 mx-auto ${targetShape.color} rounded-3xl flex items-center justify-center text-white p-8 shadow-xl`}
+            className={`w-24 h-24 mx-auto ${targetShape.color} rounded-3xl flex items-center justify-center text-white p-4 shadow-xl`}
           >
             {targetShape.icon}
           </motion.div>
@@ -191,7 +191,7 @@ export default function ShapesGame({ onBack }: ShapesGameProps) {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ scale: 1.1, rotate: 5 }}
-              whileTap={{ scale: 0.9 }}
+              whileTap={{ scale: 0.65 }}
               onClick={() => handleAnswer(shape)}
               disabled={showFeedback !== null}
               className={`${shape.color} aspect-square rounded-2xl shadow-xl hover:shadow-2xl transition-shadow disabled:opacity-50 flex items-center justify-center text-white p-6`}
