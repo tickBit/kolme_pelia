@@ -1,6 +1,6 @@
 # Kolme peliä / three games
 
-Tehty pääsin Figmalla. Paranneltu manuaalisesti.
+Tehty pääosin Figmalla. Paranneltu manuaalisesti.
 
 Made in Figma mostly. Improved manually.
 
